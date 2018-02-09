@@ -1,0 +1,27 @@
+{
+    "name": "lucid-arch/laravel-console",
+    "description": "The Command Line Interface for the Lucid Architecture",
+    "keywords": ["laravel", "lucid", "mvc", "ddd", "domains", "architecture"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abed Halawi",
+            "email": "abed.halawi@vinelab.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lucid\\Console\\": "src/"
+        }
+    },
+    "bin": ["lucid"],
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/console": "^2.7|^3.0",
+        "symfony/process": "^2.7|^3.0",
+        "symfony/finder": "^2.7|^3.0",
+        "symfony/filesystem": "^2.7|^3.0",
+        "stevebauman/log-reader": "^1.1",
+        "phploc/phploc": "^3.0"
+    }
+}

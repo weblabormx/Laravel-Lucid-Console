@@ -1,0 +1,38 @@
+#!/usr/bin/env php
+<?php
+
+if (file_exists(__DIR__.'/vendor/autoload.php')) {
+    require __DIR__.'/vendor/autoload.php';
+} else {
+    require __DIR__.'/../../../bootstrap/autoload.php';
+}
+
+$laravel = require __DIR__.'/../../../bootstrap/app.php';
+
+$commands = [
+    new Lucid\Console\Commands\ChangeSourceNamespaceCommand(),
+    new Lucid\Console\Commands\JobMakeCommand(),
+    new Lucid\Console\Commands\JobDeleteCommand(),
+    new Lucid\Console\Commands\ServiceMakeCommand(),
+    new Lucid\Console\Commands\ServiceDeleteCommand(),
+    new Lucid\Console\Commands\FeatureMakeCommand(),
+    new Lucid\Console\Commands\FeatureDeleteCommand(),
+    new Lucid\Console\Commands\ControllerMakeCommand(),
+    new Lucid\Console\Commands\ServicesListCommand(),
+    new Lucid\Console\Commands\FeaturesListCommand(),
+
+    new \Lucid\Console\Commands\ModelMakeCommand(),
+    new \Lucid\Console\Commands\ModelDeleteCommand(),
+    new \Lucid\Console\Commands\RequestMakeCommand(),
+    new \Lucid\Console\Commands\RequestDeleteCommand(),
+    new \Lucid\Console\Commands\PolicyMakeCommand(),
+    new \Lucid\Console\Commands\PolicyDeleteCommand(),
+
+    new \Lucid\Console\Commands\OperationMakeCommand(),
+    new \Lucid\Console\Commands\OperationDeleteCommand(),
+];
+
+$app = new Symfony\Component\Console\Application('Lucid Console', '0.5.5');
+array_walk($commands, [$app, 'add']);
+
+$app->run();
