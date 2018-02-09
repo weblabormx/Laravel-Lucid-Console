@@ -21,7 +21,11 @@
     "bin": ["lucid"],
     "minimum-stability": "stable",
     "require": {
-        "stevebauman/log-reader": "^1.1",
-        "phploc/phploc": "^3.0"
+        "symfony/console": "*",
+        "symfony/process": "*",
+        "symfony/finder": "*",
+        "symfony/filesystem": "*",
+        "stevebauman/log-reader": "*",
+        "phploc/phploc": "*"
     }
 }
