@@ -1,9 +1,13 @@
 {
-    "name": "lucid-arch/laravel-console",
-    "description": "The Command Line Interface for the Lucid Architecture",
+    "name": "weblabormx/laravel-lucid-console",
+    "description": "An updated version of lucid-arch/laravel-console repository",
     "keywords": ["laravel", "lucid", "mvc", "ddd", "domains", "architecture"],
     "license": "MIT",
     "authors": [
+        {
+            "name": "Carlos Escobar",
+            "email": "carlosescobar@weblabor.mx"
+        },
         {
             "name": "Abed Halawi",
             "email": "abed.halawi@vinelab.com"
